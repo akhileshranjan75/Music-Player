@@ -1,0 +1,268 @@
+
+
+:root{
+   		--menu-color: #142b47; 
+   		--section-color: #FEDCD2;
+   		--back-color: #BFD8D2;
+}
+
+/* Navigation Bar */
+.menu{
+		width: 100%;
+		background: var(--menu-color);
+		overflow: auto;
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 60px;
+}
+
+.menu li{
+	float: left;
+}
+
+.menu ul li a{
+	background-color: var(--menu-color);
+	text-decoration: none;
+	width: 130px;
+	display: block;
+	text-align: center;
+	color: #f2f2f2;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.menu li a:hover{
+	color: #fff;
+	opacity: 0.5;
+	font-size: 19px;
+}
+/* Search Part*/
+.search-form{
+	margin-top: 15px;
+	float: right;
+	margin-right: 100px;
+}
+
+input[type=text]{
+	padding: 7px;
+	border: none;
+	font-size: 16px;
+
+}
+/* Search Button*/
+button{
+	float: right;
+	background: orange;
+	border-radius: 0 5px 5px 0;
+	position: relative;
+	padding: 7px;
+	border: none;
+	font-size: 16px;
+	
+}
+
+/* Image Slider*/
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+
+.slider{
+		margin: 0 auto;
+		margin-top: 0px;
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 25%;
+	  user-select: none;
+		background-color: #1c1c1c;
+		border: solid 10px #616161;
+		border-radius:10px ; 
+	}
+
+	.slider .slide_img{
+		position: absolute;
+		width: 100%;;
+		height: 100%;
+	}
+	.slider .slide_img img{
+		width: inherit;
+		height: inherit;
+	}
+
+	 .prev, .next{
+		width: 12%;
+		height: inherit;
+		position: absolute;
+		top:0; 
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff; 
+	}
+
+.slider #nav_slide{
+	width: 100%;
+	bottom: 12%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
+}
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}		
+
+@media screen and (max-width: 685px){
+	.slider{
+		border: none;
+		width: 100%;
+		height: 0;
+		padding-bottom: 55%; 
+	}	
+	
+	label span { font-size: 50pt; }
+	
+	.prev, .next{
+		width: 15%;
+	}	
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
+}
+@media screen  and(min-width: 970px){
+	.me{ display: none;}
+}
+
+/* Section Headings */
+h4{
+	font-size: 1.3rem;
+	margin-left: 30px;
+}
+
+h4 a{
+	text-decoration: none;
+}
+
+h4 a:hover{
+	color: 	#EE82EE;
+}
+
+/*Recent Section Images*/
+.recent{
+	background-color: var(--section-color);
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recent-images a:hover{
+	color: white;
+}
+
+.recent-images img{
+	height: 200px;
+	width: 150px;
+	border: solid 0.3em;
+    border-radius: 1.5em;
+}
+
+#playlist-part{
+	background-color: var(--back-color);
+}
+/* My Playlist Images*/
+#imagelist{
+	font-size: 0;
+	width: 828px;
+	margin: 0 auto;
+}
+
+#imagelist a{
+	margin: 10px;
+	border: 6px solid transparent;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#imagelist a:hover{
+	border-color: white;
+}
+
+#imagelist img{
+	-webkit-border-radius: 20px;
+	border-radius: 15px;
+	border: solid 0.3em;
+}
+
+/* Footer Section*/
+footer{
+	width: 100%;
+	background-color: #b3b3b3; 
+	padding: 1.5px 0px;
+}
+
+#media{
+	width: 70px;
+	height: 70px;
+	margin-top: 40px;
+	margin-left: 480px;
+}

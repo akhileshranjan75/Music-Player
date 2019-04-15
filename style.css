@@ -1,0 +1,161 @@
+body{
+		background-color: #4ABDAC;
+		margin: 0;
+	}
+:root{
+   		--menu-color: #142b47;
+   		--section-color:  #DFDCE3;
+}
+
+
+/* Navigation Bar */
+.menu{
+		width: 100%;
+		background: var(--menu-color);
+		overflow: auto;
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 60px;
+}
+
+.menu li{
+	float: left;
+}
+
+.menu ul li a{
+	background-color: var(--menu-color);
+	text-decoration: none;
+	width: 130px;
+	display: block;
+	text-align: center;
+	color: #f2f2f2;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.menu li a:hover{
+	color: #fff;
+	opacity: 0.5;
+	font-size: 19px;
+}
+
+/* Search Part*/
+.search-form{
+	margin-top: 15px;
+	float: right;
+	margin-right: 100px;
+}
+
+input[type=text]{
+	padding: 7px;
+	border: none;
+	font-size: 16px;
+
+}
+
+/* Search Button*/
+button{
+	float: right;
+	background: orange;
+	border-radius: 0 5px 5px 0;
+	position: relative;
+	padding: 7px;
+	border: none;
+	font-size: 16px;
+	
+}
+
+/* Carousel Part*/
+.carousel{
+	width: 70%;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-image: url(images/carousel/1.jpg);
+	background-size: 100% 100%;
+	box-shadow: 1px 2px 10px 5px lightblue;
+	animation: slider 15s infinite linear;
+	
+}
+@keyframes slider{
+	0%{
+		background-image: url(images/carousel/1.jpg);
+		background-size: 100% 100%;
+	}
+	25%{
+		background-image: url(images/carousel/2.jpg);	
+		background-size: 100% 100%;
+	}
+	50%{
+		background-image: url(images/carousel/3.jpg);
+		background-size: 100% 100%;	
+	}
+	75%{
+		background-image: url(images/carousel/4.jpg);
+		background-size: 100% 100%;
+	}
+	100%{
+		background-image: url(images/carousel/5.jpg);
+		background-size: 100% 100%;
+	}
+}
+
+/* Section Heading Part*/
+h4{
+	font-size: 1.3rem;
+	margin-left: 30px;
+}
+h4 a{
+	text-decoration: none;
+
+}
+h4 a:hover{
+	color: 	#EE82EE;
+}
+
+/* Topcharts Section*/
+#topcharts{
+	margin-top: 500px;
+	background-color:  var(--section-color);
+}
+#editorpicks{
+	background-color:  var(--section-color);
+}
+#partyholics{
+	background-color:  var(--section-color);
+}
+/*Images Part*/
+
+.maindiv img{
+	height: 200px;
+	width: 200px;
+	margin-left: 1.5%;
+	border: solid 0.3em;
+    border-radius: 1.5em;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.maindiv a:hover{
+	color: white;
+}
+
+/* Footer Part*/
+footer{
+	width: 100%;
+	background-color: #b3b3b3; 
+	padding: 1.5px 0px;
+}
+
+#media{
+	width: 70px;
+	height: 70px;
+	margin-top: 40px;
+	margin-left: 480px;
+}
